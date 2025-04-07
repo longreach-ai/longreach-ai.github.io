@@ -1,34 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Bitbucket Page</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 50px;
-      background-color: #f5f5f5;
-    }
-    h1 {
-      color: #333;
-    }
-    p {
-      color: #666;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LongReach AI</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Welcome to LongReach</h1>
-  <p>This is a static site hosted with <strong>LongReach</strong>.</p>
-  <p>Edit <code>index.html</code> to customize your content.</p>
-  <p>
-    <a href="https://bitbucket.org">Visit Bitbucket</a>
-  </p>
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>LongReach AI</h1>
+        <p>Empowering lives through innovative AI solutions for happiness, health, and fulfillment.</p>
+        <a href="#apps" class="cta-button">Explore Our Apps</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#apps">Apps</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Mission Section -->
+    <section id="mission" class="content-section">
+      <h2>Our Mission</h2>
+      <p>
+        At LongReach AI, our mission is to revolutionize daily living through innovative AI technology. We empower individuals to experience enhanced happiness, improved health, and greater productivity by seamlessly integrating intelligent solutions into everyday routines.
+      </p>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="content-section alternate-bg">
+      <h2>Our Vision</h2>
+      <p>
+        We envision a future where smart technology transforms every facet of life. By leading in AI innovation, we aim to deliver intuitive solutions that streamline tasks, enhance security, and foster a more connected and vibrant society.
+      </p>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="content-section">
+      <h2>Our Team</h2>
+      <p>
+        At LongReach AI, our dynamic team of visionary developers, creative designers, and forward-thinking innovators collaborates to craft cutting-edge AI solutions. We are dedicated to solving real-world challenges and driving positive change through technology.
+      </p>
+    </section>
+
+    <!-- Apps Section -->
+    <section id="apps" class="apps-section">
+      <h2>Our Apps</h2>
+      <div class="apps-container">
+        <a href="./pdfreader/pdfreader.html">
+          <div class="app-card">
+            <img src="pdfreader-icon.png" alt="PDF Reader App Icon" class="app-icon">
+            <h3>PDF Reader</h3>
+            <p>Seamlessly read, annotate, and manage your PDF documents with advanced AI capabilities.</p>
+          </div>
+        </a>
+        <a href="./alldocumentreader/alldocumentreader.html">
+          <div class="app-card">
+            <img src="alldocumentreader-icon.png" alt="All Document Reader App Icon" class="app-icon">
+            <h3>All Document Reader</h3>
+            <p>Effortlessly access and organize documents of all types to boost your productivity on the go.</p>
+          </div>
+        </a>
+        <a href="./aipalmistry/aipalmistry.html">
+          <div class="app-card">
+            <img src="aipalmistry-icon.png" alt="AI Palmistry App Icon" class="app-icon">
+            <h3>AI Palmistry</h3>
+            <p>Unlock hidden insights from your palm with innovative AI-powered analysis for personalized guidance.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 LongReach AI. All Rights Reserved.</p>
+    <p>Contact us: <a href="mailto:support@longreach.ai">whippanyplex@outlook.com</a></p>
+  </footer>
 </body>
 </html>
