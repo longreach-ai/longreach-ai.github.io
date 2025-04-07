@@ -23,7 +23,7 @@ header.farich-section {
   width: 100%;
   padding: 0;
   height: calc(100vw * 9 / 16); /* 16:9 Aspect Ratio */
-  background: url('farich-background.jpg') no-repeat center center/cover;
+  background: url('bgi.png') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
