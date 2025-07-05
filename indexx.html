@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LongReach AI | Mobile App Innovators</title>
+    <title>LongReach AI | AI App Innovators</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -179,19 +179,37 @@
             margin-top: 30px;
         }
 
-        .secondary-button {
+        .btn {
             padding: 12px 30px;
-            background: transparent;
-            border: 2px solid var(--primary);
             border-radius: 8px;
-            color: var(--primary);
             font-weight: 600;
             font-size: 16px;
             cursor: pointer;
             transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
         }
 
-        .secondary-button:hover {
+        .primary-btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+        }
+
+        .secondary-btn {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .secondary-btn:hover {
             background: rgba(108, 99, 255, 0.1);
             transform: translateY(-3px);
         }
@@ -619,6 +637,23 @@
                 font-size: 2rem;
             }
         }
+
+        /* Button click animation */
+        @keyframes buttonClick {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.95);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .click-animation {
+            animation: buttonClick 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -636,7 +671,7 @@
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
-            <button class="cta-button">Get Our Apps</button>
+            <a href="#apps" class="cta-button">Get Our Apps</a>
         </div>
     </header>
 
@@ -647,8 +682,8 @@
                 <h1 class="hero-title">AI-Powered Mobile Experiences</h1>
                 <p class="hero-subtitle">LongReach AI develops innovative mobile applications that harness the power of artificial intelligence to solve real-world problems and enhance productivity.</p>
                 <div class="hero-buttons">
-                    <button class="cta-button">Explore Apps</button>
-                    <button class="secondary-button">Contact Us</button>
+                    <a href="#apps" class="btn primary-btn" id="explore-btn">Explore Apps</a>
+                    <a href="#contact" class="btn secondary-btn" id="contact-btn">Contact Us</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -808,7 +843,7 @@
                         <label class="form-label">Message</label>
                         <textarea class="form-input" placeholder="Your message"></textarea>
                     </div>
-                    <button class="cta-button" style="width: 100%;">Send Message</button>
+                    <button class="btn primary-btn" style="width: 100%;">Send Message</button>
                 </form>
             </div>
         </div>
@@ -857,18 +892,66 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 LongReach AI. All rights reserved.</p>
+                <p>&copy; 2025 LongReach AI. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple animation on scroll
+        // Button click functionality
         document.addEventListener('DOMContentLoaded', function() {
+            // Explore Apps button
+            const exploreBtn = document.getElementById('explore-btn');
+            if (exploreBtn) {
+                exploreBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.classList.add('click-animation');
+                    setTimeout(() => {
+                        this.classList.remove('click-animation');
+                    }, 300);
+                    
+                    document.querySelector('#apps').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            // Contact Us button
+            const contactBtn = document.getElementById('contact-btn');
+            if (contactBtn) {
+                contactBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.classList.add('click-animation');
+                    setTimeout(() => {
+                        this.classList.remove('click-animation');
+                    }, 300);
+                    
+                    document.querySelector('#contact').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            // Get Our Apps button
+            const getAppsBtn = document.querySelector('.cta-button');
+            if (getAppsBtn) {
+                getAppsBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.classList.add('click-animation');
+                    setTimeout(() => {
+                        this.classList.remove('click-animation');
+                    }, 300);
+                    
+                    document.querySelector('#apps').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            // Add animation delay to elements
             const appCards = document.querySelectorAll('.app-card');
             const featureCards = document.querySelectorAll('.feature-card');
             
-            // Add animation delay to elements
             appCards.forEach((card, index) => {
                 card.style.transitionDelay = `${index * 0.1}s`;
             });
